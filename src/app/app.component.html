@@ -1,0 +1,25 @@
+
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button routerLink="" class="btn btn-success" type="button" name="buycrypto">Home</button>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="isLoggedIn">
+          <a>{{userName}}</a>
+          <a (click)="logout()" routerLink=''>Log out</a>
+        </li>
+        <li *ngIf ="!isLoggedIn">
+          <!-- <a (click)="login()">Log in</a><a (click)="login()">Log in</a> -->
+          <button class="btn btn-info" type="button" name="login"><a (click)="login()">Log in</a></button>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer></footer>

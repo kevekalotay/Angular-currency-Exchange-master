@@ -1,0 +1,41 @@
+<div class="container">
+  <form class="crypto" action="index.html" method="post">
+    <h2>Crypto-Currency Exchange Rates</h2>
+    <label for="">Crypto to convert from:</label>
+    <select class="form-control" id="crypto" #symbol>
+      <option value="BTC">Bitcoin</option>
+      <option value="BCH">Bitcoin Cash</option>
+      <option value="BCN">Bytecoin</option>
+      <option value="DASH">Dash</option>
+      <option value="DOGE">Dogecoin</option>
+      <option value="ETH">Ethereum</option>
+      <option value="ETC">Ethereum Classic</option>
+      <option value="EMC">Eemrcoin</option>
+      <option value="FTC">Feathercoin</option>
+      <option value="GRC">Gridcoin</option>
+      <option value="LTC">Litecoin</option>
+      <option value="XMR">Monero</option>
+      <option value="XEM">NEM</option>
+      <option value="NXT">Nxt</option>
+      <option value="PPC">Peercoin</option>
+      <option value="XRP">Ripple</option>
+      <option value="XLM">Stellar</option>
+      <option value="STC">SwiftCoin</option>
+      <option value="VTC">Verge</option>
+      <option value="VTC">Vertcoin</option>
+      <option value="WAVES">Waves Platform</option>
+      <option value="ZEC">Zcash</option>
+
+    </select>
+    <label for="">Market to convert to:</label>
+    <select class="form-control" id="crypto" #market>
+      <option value="USD">US dollar</option>
+      <option value="EUR">Euro</option>
+    </select>
+
+    
+    <button id="button" class="btn btn-success" type="submit" name="button" (click)="triggerCryptoRequest(symbol.value, market.value, '500')"> Submit - takes few moments for maximum accuracy</button>
+  </form>
+  <div class="printout" *ngIf="rate !== ''">
+    <p>1 {{symbol.value}} = {{rate}} {{market.value}}</p>
+</div>

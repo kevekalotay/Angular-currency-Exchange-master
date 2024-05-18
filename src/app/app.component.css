@@ -1,0 +1,25 @@
+header {
+  background-color: rgb(215, 219, 224, 0.7);
+}
+.background {
+  background-image: linear-gradient(rgba(255,255,255,0.62)) ,url(https://images.pexels.com/photos/259193/pexels-photo-259193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 7%;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  background-color: rgb(215, 219, 224, 0.7);
+  margin-top: 100px;
+}
+a {
+  color: blue;
+}
+button {
+  color: black;
+}
